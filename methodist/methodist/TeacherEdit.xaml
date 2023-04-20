@@ -1,0 +1,23 @@
+﻿<Page x:Class="methodist.TeacherEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:methodist"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="750"
+      Title="TeacherEdit">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Top" Margin="20" HorizontalAlignment="Left">
+            <TextBox x:Name="disciplineTextBox" materialDesign:HintAssist.Hint="Дисциплина" VerticalContentAlignment="Center" FontSize="16" HorizontalContentAlignment="Center" Width="200" Height="45" Margin="20"/>
+            <Button Width="175" Height="40" Margin="20" Content="Добавить" Click="Button_Click"/>
+        </StackPanel>
+        <DataGrid x:Name="grid" AutoGenerateColumns="False" Width="450" HorizontalAlignment="Right" Margin="20">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Наименование}" Header="Дисциплина"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
